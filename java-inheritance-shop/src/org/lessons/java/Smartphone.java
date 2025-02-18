@@ -1,15 +1,18 @@
 package org.lessons.java;
 
+import java.math.BigDecimal;
+
 public class Smartphone extends Prodotto {
 
     // attributi
-    public String imeiCode;
-    public int quantitaMemoria;
+    private String imeiCode;
+    private int quantitaMemoria;
 
     // costruttore
-    public Smartphone(int codice, String imeiCode, int quantitaMemoria) {
-        // richiamo l'attributo codice da prodotto
-        super(codice);
+    public Smartphone(String nome, String marca, BigDecimal prezzo, BigDecimal iva, String imeiCode,
+            int quantitaMemoria) {
+
+        super(nome, marca, prezzo, iva);
         this.imeiCode = imeiCode;
         this.quantitaMemoria = quantitaMemoria;
 

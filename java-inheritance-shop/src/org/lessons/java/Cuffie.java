@@ -1,15 +1,18 @@
 package org.lessons.java;
 
+import java.math.BigDecimal;
+
 public class Cuffie extends Prodotto {
     // attributi
-    public String colore;
-    boolean isWireless;
-    boolean isCablate;
+    private String colore;
+    private boolean isWireless;
+    private boolean isCablate;
 
     // costruttore
-    public Cuffie(int codice, String colore, boolean isWireless, boolean isCablate) {
+    public Cuffie(String nome, String marca, BigDecimal prezzo, BigDecimal iva, String colore, boolean isWireless,
+            boolean isCablate) {
         // richiamo l'attributo codice da prodotto
-        super(codice);
+        super(nome, marca, prezzo, iva);
         this.colore = colore;
         this.isWireless = isWireless;
         this.isCablate = isCablate;

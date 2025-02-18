@@ -1,14 +1,16 @@
 package org.lessons.java;
 
+import java.math.BigDecimal;
+
 public class Televisori extends Prodotto {
     // attributi
-    public int dimensioni;
-    public boolean isSmart;
+    private int dimensioni;
+    private boolean isSmart;
 
     // costruttore
-    public Televisori(int codice, boolean isSmart, int dimensioni) {
+    public Televisori(String nome, String marca, BigDecimal prezzo, BigDecimal iva, boolean isSmart, int dimensioni) {
         // richiamo l'attributo codice da prodotto
-        super(codice);
+        super(nome, marca, prezzo, iva);
         this.dimensioni = dimensioni;
         this.isSmart = isSmart;
 
