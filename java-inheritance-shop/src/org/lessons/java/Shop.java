@@ -16,5 +16,10 @@ public class Shop {
                 "546215982336754", 512);
 
         System.out.println(smartphone.getImeiCode());
+
+        // creo uno televisore
+        Televisori televisore = new Televisori("LG TV", "LG", new BigDecimal(765), new BigDecimal(0.22), true, 40);
+
+        System.out.println(televisore.getDimensioni());
     }
 }
