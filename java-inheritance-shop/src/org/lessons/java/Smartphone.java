@@ -3,8 +3,8 @@ package org.lessons.java;
 public class Smartphone extends Prodotto {
 
     // attributi
-    String imeiCode;
-    int quantitaMemoria;
+    public String imeiCode;
+    public int quantitaMemoria;
 
     // costruttore
     public Smartphone(int codice, String imeiCode, int quantitaMemoria) {
@@ -17,7 +17,7 @@ public class Smartphone extends Prodotto {
 
     // metodi
     public String getImeiCode() {
-        return "l'imeiCode del prodotto è " + imeiCode;
+        return "l'imeiCode dello smartphone è " + imeiCode;
     }
 
     public void setImeiCode(String imeiCode) {
@@ -25,7 +25,7 @@ public class Smartphone extends Prodotto {
     }
 
     public String getQuantitaMemoria() {
-        return "la Quantità di memoria del prodotto è " + quantitaMemoria + " GB";
+        return "la Quantità di memoria dello smartphone è " + quantitaMemoria + " GB";
     }
 
     public void setQuantitaMemoria(int quantitaMemoria) {
