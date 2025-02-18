@@ -9,8 +9,8 @@ public class Televisori extends Prodotto {
     public Televisori(int codice, boolean isSmart, int dimensioni) {
         // richiamo l'attributo codice da prodotto
         super(codice);
-        this.isSmart = isSmart;
         this.dimensioni = dimensioni;
+        this.isSmart = isSmart;
 
     }
 
@@ -23,11 +23,11 @@ public class Televisori extends Prodotto {
         this.dimensioni = dimensioni;
     }
 
-    public boolean getisSmart() {
+    public boolean getIsSmart() {
         return isSmart;
     }
 
-    public void setisSmart(boolean isSmart) {
+    public void setIsSmart(boolean isSmart) {
         this.isSmart = isSmart;
     }
 
