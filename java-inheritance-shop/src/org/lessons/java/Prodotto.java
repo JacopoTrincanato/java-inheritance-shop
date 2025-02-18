@@ -23,9 +23,9 @@ public class Prodotto {
     }
 
     // costruttore per il codice
-    public Prodotto() {
+    public Prodotto(int codice) {
         Random random = new Random();
-        this.codice = random.nextInt(100000);
+        codice = random.nextInt(100000);
     }
 
     // metodi
