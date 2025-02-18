@@ -6,7 +6,7 @@ import java.util.Random;
 public class Prodotto {
 
     // attributi
-    private int codice;
+    protected int codice;
     public String nome;
     public String marca;
     public BigDecimal prezzo;
@@ -20,6 +20,12 @@ public class Prodotto {
         this.marca = marca;
         this.prezzo = prezzo;
         this.iva = iva;
+    }
+
+    // costruttore per il codice
+    public Prodotto() {
+        Random random = new Random();
+        this.codice = random.nextInt(100000);
     }
 
     // metodi
