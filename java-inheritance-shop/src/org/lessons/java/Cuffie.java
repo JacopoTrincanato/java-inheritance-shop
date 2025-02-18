@@ -3,22 +3,16 @@ package org.lessons.java;
 public class Cuffie extends Prodotto {
     // attributi
     public String colore;
-    public String tipo;
+    boolean isWireless;
+    boolean isCablate;
 
     // costruttore
-    public Cuffie(int codice, String tipo, String colore) {
+    public Cuffie(int codice, String colore, boolean isWireless, boolean isCablate) {
         // richiamo l'attributo codice da prodotto
         super(codice);
         this.colore = colore;
-
-        boolean isWireless = true;
-
-        if (isWireless) {
-            this.tipo = "Wireless";
-        } else {
-            this.tipo = "Cablate";
-        }
-
+        this.isWireless = isWireless;
+        this.isCablate = isCablate;
     }
 
     // metodi
@@ -30,11 +24,19 @@ public class Cuffie extends Prodotto {
         this.colore = colore;
     }
 
-    public String getTipo() {
-        return tipo;
+    public boolean getIsWireless() {
+        return isWireless;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setIsWireless(boolean isWireless) {
+        this.isWireless = isWireless;
+    }
+
+    public boolean getIsCablate() {
+        return isCablate;
+    }
+
+    public void setIsCablate(boolean isCablate) {
+        this.isCablate = isCablate;
     }
 }
