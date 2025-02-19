@@ -38,7 +38,7 @@ public class Smartphone extends Prodotto {
     // override
     @Override
     public String toString() {
-        return String.format("Nome telefono: %s, Marca telefono: %s, Prezzo: %s, Codice IMEI: %s, Memoria: %s GB",
+        return String.format("Nome telefono: %s, Marca telefono: %s, Prezzo: %s euro, Codice IMEI: %s, Memoria: %s GB",
                 this.nome, this.marca, this.prezzo, this.imeiCode, this.quantitaMemoria);
     }
 }

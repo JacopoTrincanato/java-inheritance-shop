@@ -47,7 +47,7 @@ public class Cuffie extends Prodotto {
     @Override
     public String toString() {
         return String.format(
-                "Nome cuffie: %s, Marca cuffie: %s, Prezzo: %s, Colore: %s, isWireless: %s, isCablate: %s",
+                "Nome cuffie: %s, Marca cuffie: %s, Prezzo: %s euro, Colore: %s, isWireless: %s, isCablate: %s",
                 this.nome, this.marca, this.prezzo, this.colore, this.isWireless, this.isCablate);
     }
 }
