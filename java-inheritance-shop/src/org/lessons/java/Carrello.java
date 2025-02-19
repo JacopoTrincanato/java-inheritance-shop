@@ -95,6 +95,9 @@ public class Carrello {
                 // aggiungo l'ultimo prodotto alla fine
                 carrelloAggiornato[carrelloAggiornato.length - 1] = televisore;
 
+                // sovrascrivo il carrello originale con quello aggiornato
+                carrello = carrelloAggiornato;
+
                 break;
 
             case "cuffie":
@@ -130,8 +133,13 @@ public class Carrello {
                 // aggiungo l'ultimo prodotto alla fine
                 carrelloAggiornato[carrelloAggiornato.length - 1] = cuffie;
 
+                // sovrascrivo il carrello originale con quello aggiornato
+                carrello = carrelloAggiornato;
+
                 break;
         }
+
+        System.out.println(carrello);
 
         // chiudo lo scanner
         scanner.close();
