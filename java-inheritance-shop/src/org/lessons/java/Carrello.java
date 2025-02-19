@@ -9,12 +9,27 @@ public class Carrello {
         // creo uno scanner
         Scanner scanner = new Scanner(System.in);
 
+        // mostro a schermo la domanda iniziale
         System.out.println("Vuoi inserire un nuovo smartphone, un nuovo televisore o un nuovo paio di cuffie?");
 
+        // creo una variabile che permetta all'utente di scegliere l'opzione
         String opzione = scanner.nextLine();
 
-        // controllo che tipo di opzione ha scelto il cliente
+        // creo un array carrello dove salvare i prodotti
+        Prodotto[] carrello = new Prodotto[0];
+
+        // creo un nuovo carrello lungo come quello originale + 1
+        Prodotto[] carrelloAggiornato = new Prodotto[carrello.length + 1];
+
+        // copio il carrello originale nel nuovo, prodotto per prodotto
+        for (int i = 0; i < carrello.length; i++) {
+            carrelloAggiornato[i] = carrello[i];
+        }
+
+        // controllo che tipo di opzione ha scelto il cliente e in base a quello stampo
+        // il modello di inserimento dati
         switch (opzione) {
+
             case "smartphone":
 
                 // creo le variabili con i dati da inserire
@@ -41,6 +56,13 @@ public class Carrello {
                         imeiCode, memoria);
 
                 System.out.println(smartphone);
+
+                // aggiungo l'ultimo prodotto alla fine
+                carrelloAggiornato[carrelloAggiornato.length - 1] = smartphone;
+
+                // sovrascrivo il carrello originale con quello aggiornato
+                carrello = carrelloAggiornato;
+
                 break;
 
             case "televisore":
@@ -69,6 +91,10 @@ public class Carrello {
                         isSmart, dimensioni);
 
                 System.out.println(televisore);
+
+                // aggiungo l'ultimo prodotto alla fine
+                carrelloAggiornato[carrelloAggiornato.length - 1] = televisore;
+
                 break;
 
             case "cuffie":
@@ -100,6 +126,10 @@ public class Carrello {
                         coloreCuffie, isWireless, isCablate);
 
                 System.out.println(cuffie);
+
+                // aggiungo l'ultimo prodotto alla fine
+                carrelloAggiornato[carrelloAggiornato.length - 1] = cuffie;
+
                 break;
         }
 
