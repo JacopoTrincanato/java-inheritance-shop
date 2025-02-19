@@ -1,5 +1,6 @@
 package org.lessons.java;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Carrello {
@@ -12,17 +13,25 @@ public class Carrello {
 
         String opzione = scanner.nextLine();
 
+        Smartphone smartphone = new Smartphone("Galaxy s4", "Samsung", new BigDecimal(300), new BigDecimal(0.22),
+                "123456789012345", 32);
+
+        Televisori televisore = new Televisori(null, null, null, null, false, 0);
+
+        Cuffie cuffie = new Cuffie(null, null, null, null, null, false, false);
+
         // controllo che tipo di opzione ha scelto il cliente
         switch (opzione) {
             case "smartphone":
-                Smartphone smartphone = new Smartphone(null, null, null, null, null, 0);
+                System.out.println(smartphone);
                 break;
+
             case "televisore":
-                Televisori televisore = new Televisori(null, null, null, null, false, 0);
+                System.out.println(televisore);
                 break;
 
             case "cuffie":
-                Cuffie cuffie = new Cuffie(null, null, null, null, null, false, false);
+                System.out.println(cuffie);
                 break;
         }
     }
