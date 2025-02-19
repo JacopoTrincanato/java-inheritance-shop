@@ -13,9 +13,6 @@ public class Carrello {
 
         String opzione = scanner.nextLine();
 
-        Smartphone smartphone = new Smartphone("Galaxy s4", "Samsung", new BigDecimal(300), new BigDecimal(0.22),
-                "123456789012345", 32);
-
         Televisori televisore = new Televisori("Apple tv", "Apple", new BigDecimal(700), new BigDecimal(0.22), true,
                 60);
 
@@ -25,6 +22,29 @@ public class Carrello {
         // controllo che tipo di opzione ha scelto il cliente
         switch (opzione) {
             case "smartphone":
+                // creo le variabili con i dati da inserire
+                System.out.println("Inserisci il nome");
+                String nome = scanner.nextLine();
+
+                System.out.println("Inserisci la marca");
+                String marca = scanner.nextLine();
+
+                System.out.println("Inserisci il prezzo");
+                BigDecimal prezzo = scanner.nextBigDecimal();
+
+                System.out.println("Inserisci l'iva");
+                BigDecimal iva = scanner.nextBigDecimal();
+                scanner.nextLine();
+
+                System.out.println("Inserisci l'imeiCode");
+                String imeiCode = scanner.nextLine();
+
+                System.out.println("Inserisci la memoria");
+                int memoria = scanner.nextInt();
+
+                Smartphone smartphone = new Smartphone(nome, marca, prezzo, iva,
+                        imeiCode, memoria);
+
                 System.out.println(smartphone);
                 break;
 
