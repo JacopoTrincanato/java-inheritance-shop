@@ -34,4 +34,11 @@ public class Smartphone extends Prodotto {
     public void setQuantitaMemoria(int quantitaMemoria) {
         this.quantitaMemoria = quantitaMemoria;
     }
+
+    // override
+    @Override
+    public String toString() {
+        return String.format("Nome telefono: %s, Marca telefono: %s, Prezzo: %s, Codice IMEI: %s, Memoria: %s",
+                this.nome, this.marca, this.prezzo, this.imeiCode, this.quantitaMemoria);
+    }
 }

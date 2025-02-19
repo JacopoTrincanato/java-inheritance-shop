@@ -33,4 +33,12 @@ public class Televisori extends Prodotto {
         this.isSmart = isSmart;
     }
 
+    // override
+    @Override
+    public String toString() {
+        return String.format(
+                "Nome televisore: %s, Marca televisore: %s, Prezzo: %s, dimensioni: %s pollici, isSmart: %s",
+                this.nome, this.marca, this.prezzo, this.dimensioni, this.isSmart);
+    }
+
 }

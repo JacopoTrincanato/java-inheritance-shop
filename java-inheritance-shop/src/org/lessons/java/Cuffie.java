@@ -42,4 +42,12 @@ public class Cuffie extends Prodotto {
     public void setIsCablate(boolean isCablate) {
         this.isCablate = isCablate;
     }
+
+    // override
+    @Override
+    public String toString() {
+        return String.format(
+                "Nome telefono: %s, Marca telefono: %s, Prezzo: %s, Colore: %s, isWireless: %s, isCablate: %s",
+                this.nome, this.marca, this.prezzo, this.colore, this.isWireless, this.isCablate);
+    }
 }
