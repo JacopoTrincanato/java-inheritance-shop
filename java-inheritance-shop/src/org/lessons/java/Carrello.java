@@ -16,9 +16,11 @@ public class Carrello {
         Smartphone smartphone = new Smartphone("Galaxy s4", "Samsung", new BigDecimal(300), new BigDecimal(0.22),
                 "123456789012345", 32);
 
-        Televisori televisore = new Televisori(null, null, null, null, false, 0);
+        Televisori televisore = new Televisori("Apple tv", "Apple", new BigDecimal(700), new BigDecimal(0.22), true,
+                60);
 
-        Cuffie cuffie = new Cuffie(null, null, null, null, null, false, false);
+        Cuffie cuffie = new Cuffie("Cuffie Galattiche", "JBL", new BigDecimal(70), new BigDecimal(0.22), "nero", true,
+                false);
 
         // controllo che tipo di opzione ha scelto il cliente
         switch (opzione) {
@@ -34,5 +36,8 @@ public class Carrello {
                 System.out.println(cuffie);
                 break;
         }
+
+        // chiudo lo scanner
+        scanner.close();
     }
 }
