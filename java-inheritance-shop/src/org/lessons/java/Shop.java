@@ -21,5 +21,6 @@ public class Shop {
         Televisori televisore = new Televisori("LG TV", "LG", new BigDecimal(765), new BigDecimal(0.22), true, 40);
 
         System.out.println(televisore.getDimensioni());
+
     }
 }
