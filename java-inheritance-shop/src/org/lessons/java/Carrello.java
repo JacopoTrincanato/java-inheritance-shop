@@ -1,6 +1,7 @@
 package org.lessons.java;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Carrello {
@@ -15,16 +16,8 @@ public class Carrello {
         // creo una variabile che permetta all'utente di scegliere l'opzione
         String opzione = scanner.nextLine();
 
-        // creo un array carrello dove salvare i prodotti
-        Prodotto[] carrello = new Prodotto[0];
-
-        // creo un nuovo carrello lungo come quello originale + 1
-        Prodotto[] carrelloAggiornato = new Prodotto[carrello.length + 1];
-
-        // copio il carrello originale nel nuovo, prodotto per prodotto
-        for (int i = 0; i < carrello.length; i++) {
-            carrelloAggiornato[i] = carrello[i];
-        }
+        // creo un arrayList carrello dove salvare i prodotti
+        ArrayList<Prodotto> carrello = new ArrayList<Prodotto>();
 
         // controllo che tipo di opzione ha scelto il cliente e in base a quello stampo
         // il modello di inserimento dati
@@ -58,10 +51,7 @@ public class Carrello {
                 System.out.println(smartphone);
 
                 // aggiungo l'ultimo prodotto alla fine
-                carrelloAggiornato[carrelloAggiornato.length - 1] = smartphone;
-
-                // sovrascrivo il carrello originale con quello aggiornato
-                carrello = carrelloAggiornato;
+                carrello.add(smartphone);
 
                 break;
 
@@ -93,10 +83,7 @@ public class Carrello {
                 System.out.println(televisore);
 
                 // aggiungo l'ultimo prodotto alla fine
-                carrelloAggiornato[carrelloAggiornato.length - 1] = televisore;
-
-                // sovrascrivo il carrello originale con quello aggiornato
-                carrello = carrelloAggiornato;
+                carrello.add(televisore);
 
                 break;
 
@@ -131,10 +118,7 @@ public class Carrello {
                 System.out.println(cuffie);
 
                 // aggiungo l'ultimo prodotto alla fine
-                carrelloAggiornato[carrelloAggiornato.length - 1] = cuffie;
-
-                // sovrascrivo il carrello originale con quello aggiornato
-                carrello = carrelloAggiornato;
+                carrello.add(cuffie);
 
                 break;
         }
